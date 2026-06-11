@@ -1,0 +1,8 @@
+<span class="hljs-comment"># TODO: replace with expected highlighted output for keywords.txt</span>
+<span class="hljs-keyword">obj</span> <span class="hljs-title class_">Greeter</span> {
+    <span class="hljs-keyword">has</span> name: <span class="hljs-type">str</span> = <span class="hljs-string">&quot;world&quot;</span>;
+
+    <span class="hljs-keyword">can</span> <span class="hljs-title function_">greet</span>() {
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;hello, &quot;</span> + self.name);
+    }
+}

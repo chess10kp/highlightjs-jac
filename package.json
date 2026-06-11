@@ -1,0 +1,30 @@
+{
+  "name": "highlightjs-jac",
+  "description": "Jac language definition for highlight.js",
+  "keywords": [
+    "highlight.js",
+    "jac",
+    "syntax"
+  ],
+  "version": "0.0.0",
+  "license": "BSD-3-Clause",
+  "type": "commonjs",
+  "main": "./src/languages/jac.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jaseci/highlightjs-jac.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jaseci/highlightjs-jac/issues"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "peerDependencies": {
+    "highlight.js": ">=11.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^10.0.0",
+    "highlight.js": "^11.0.0"
+  }
+}

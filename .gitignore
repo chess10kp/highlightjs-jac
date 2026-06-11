@@ -1,0 +1,14 @@
+# Local reference clones -- browsed on disk only, not committed to this repo.
+# See reference/README.md (if present) for how to re-clone.
+reference/
+
+# Dependencies
+node_modules/
+
+# Build output
+build/
+dist/
+
+# Editor / OS noise
+.DS_Store
+*.log

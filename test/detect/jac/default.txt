@@ -1,0 +1,4 @@
+# TODO: replace with a representative Jac sample for autodetection tests.
+with entry {
+    print("hello, jac");
+}

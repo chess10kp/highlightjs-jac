@@ -1,0 +1,4 @@
+# TODO: decimal, hex, octal, binary, float, scientific, underscore separators.
+0 1 42 1_000_000
+0xFF 0o77 0b1010
+3.14 1.0e10 .5

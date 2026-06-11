@@ -1,0 +1,8 @@
+# TODO: exercise reserved words, built-ins, and literals.
+obj Greeter {
+    has name: str = "world";
+
+    can greet() {
+        print("hello, " + self.name);
+    }
+}
