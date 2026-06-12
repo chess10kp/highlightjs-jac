@@ -26,4 +26,4 @@ import { async } from math;
 import { "foo" } from math;
 
 # import with kwesc name
-import { `name` } from math;
+import { `class } from math;

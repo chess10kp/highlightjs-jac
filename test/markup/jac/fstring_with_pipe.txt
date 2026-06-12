@@ -1,0 +1,8 @@
+# Pipe operator in f-string substitution
+x = f"{a |> b}";
+
+# Pipe back in f-string substitution
+y = f"{a <| b}";
+
+# Chained pipes in f-string substitution
+z = f"{a |> b |> c}";

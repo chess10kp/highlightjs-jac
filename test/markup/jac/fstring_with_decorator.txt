@@ -1,0 +1,8 @@
+# Decorator inside f-string substitution
+x = f"{@foo bar}";
+
+# Decorator with args
+y = f"{@foo(1, 2) bar}";
+
+# Multiple decorators
+z = f"{@foo @bar baz}";

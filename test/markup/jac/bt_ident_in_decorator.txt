@@ -1,0 +1,7 @@
+# Decorator with backtick name
+@`decorator
+can foo() {}
+
+# Decorator with backtick in call args
+@decorator(`arg)
+can bar() {}

@@ -1,0 +1,8 @@
+<span class="hljs-comment"># Decorator inside f-string substitution</span>
+x = <span class="hljs-string">f&quot;<span class="hljs-subst">{<span class="hljs-operator">@</span>foo bar}</span>&quot;</span>;
+
+<span class="hljs-comment"># Decorator with args</span>
+y = <span class="hljs-string">f&quot;<span class="hljs-subst">{<span class="hljs-operator">@</span>foo(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>) bar}</span>&quot;</span>;
+
+<span class="hljs-comment"># Multiple decorators</span>
+z = <span class="hljs-string">f&quot;<span class="hljs-subst">{<span class="hljs-operator">@</span>foo <span class="hljs-operator">@</span>bar baz}</span>&quot;</span>;

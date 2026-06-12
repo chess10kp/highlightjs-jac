@@ -1,0 +1,8 @@
+<span class="hljs-comment"># Try/except inside f-string substitution</span>
+x = <span class="hljs-string">f&quot;<span class="hljs-subst">{<span class="hljs-keyword">try</span> x <span class="hljs-keyword">except</span> y: z}</span>&quot;</span>;
+
+<span class="hljs-comment"># Try with finally</span>
+y = <span class="hljs-string">f&quot;<span class="hljs-subst">{<span class="hljs-keyword">try</span> x <span class="hljs-keyword">except</span> y <span class="hljs-keyword">finally</span> z}</span>&quot;</span>;
+
+<span class="hljs-comment"># Try with multiple excepts</span>
+z = <span class="hljs-string">f&quot;<span class="hljs-subst">{<span class="hljs-keyword">try</span> x <span class="hljs-keyword">except</span> a: b <span class="hljs-keyword">except</span> c: d}</span>&quot;</span>;

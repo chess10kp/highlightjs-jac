@@ -1,0 +1,8 @@
+# del operator in f-string substitution
+x = f"{del a}";
+
+# Connect operators in f-string substitution
+y = f"{a --> b}";
+
+# del with connect in f-string substitution
+z = f"{del a --> b}";

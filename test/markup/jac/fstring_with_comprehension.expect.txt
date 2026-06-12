@@ -1,0 +1,11 @@
+<span class="hljs-comment"># List comprehension inside f-string substitution</span>
+x = <span class="hljs-string">f&quot;<span class="hljs-subst">{[i <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>)]}</span>&quot;</span>;
+
+<span class="hljs-comment"># Dict comprehension inside f-string substitution</span>
+y = <span class="hljs-string">f&quot;{{k: v for k, v in items}}&quot;</span>;
+
+<span class="hljs-comment"># Set comprehension inside f-string substitution</span>
+z = <span class="hljs-string">f&quot;{{i * 2 for i in items}}&quot;</span>;
+
+<span class="hljs-comment"># Generator expression inside f-string substitution</span>
+w = <span class="hljs-string">f&quot;<span class="hljs-subst">{(i <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>))}</span>&quot;</span>;

@@ -1,0 +1,8 @@
+# JSX in call args
+foo(<div>x</div>);
+
+# JSX in nested call args
+foo(bar(<span>x</span>));
+
+# JSX in params
+def foo(a: <div>x</div>) {}

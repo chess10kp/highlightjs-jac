@@ -1,0 +1,6 @@
+# Numbers inside f-string substitutions
+x = f"{42}";
+y = f"{3.14}";
+z = f"{0xFF}";
+w = f"{1e-10}";
+v = f"{42 + 3.14}";

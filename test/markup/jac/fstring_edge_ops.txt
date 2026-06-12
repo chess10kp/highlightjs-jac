@@ -1,0 +1,7 @@
+# Edge operators inside f-string substitutions
+x = f"hello {a --> b}";
+y = f"hello {a ++> b}";
+z = f"hello {a --> b <-- c}";
+
+# Edge ref chains inside f-string
+w = f"hello {a ++> b --> c}";

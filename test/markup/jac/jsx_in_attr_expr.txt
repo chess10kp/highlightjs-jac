@@ -1,0 +1,2 @@
+# JSX inside JSX attribute expression
+html = <div data={<span>x</span>}></div>;

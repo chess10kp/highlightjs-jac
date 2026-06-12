@@ -1,0 +1,8 @@
+# self and super inside f-string substitutions
+x = f"{self.name}";
+y = f"{super.foo()}";
+z = f"{self + super}";
+
+# Self var access
+a = f"{self.name.upper()}";
+b = f"{super.init()}";

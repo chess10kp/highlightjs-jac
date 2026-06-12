@@ -1,0 +1,26 @@
+# Number in f-string substitution
+x = f"hello {42}";
+
+# Edge operator in f-string substitution
+y = f"hello {a --> b}";
+
+# Self variable in f-string substitution
+z = f"hello {self.name}";
+
+# Super variable in f-string substitution
+w = f"hello {super.name}";
+
+# Backtick identifier in f-string substitution
+v = f"hello {`name}";
+
+# Call args in f-string substitution
+u = f"hello {foo(a, b)}";
+
+# Operator in f-string substitution
+t = f"hello {a + b}";
+
+# JSX in f-string substitution
+s = f"hello {<div>x</div>}";
+
+# Nested f-string substitution
+r = f"outer {`a: {`b:d}} end";

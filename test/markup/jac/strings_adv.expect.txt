@@ -13,10 +13,10 @@ r = <span class="hljs-string">r&quot;&quot;&quot;hello&quot;&quot;&quot;</span>;
 nested = <span class="hljs-string">f&quot;value: <span class="hljs-subst">{x: <span class="hljs-subst">{y:d}</span>}</span>&quot;</span>;
 
 <span class="hljs-comment"># f-string with conversion</span>
-conv = <span class="hljs-string">f&quot;<span class="hljs-subst">{name!r}</span>&quot;</span>;
+conv = <span class="hljs-string">f&quot;<span class="hljs-subst">{name<span class="hljs-operator">!</span>r}</span>&quot;</span>;
 
 <span class="hljs-comment"># f-string with format spec</span>
-fmt = <span class="hljs-string">f&quot;<span class="hljs-subst">{pi:.2f}</span>&quot;</span>;
+fmt = <span class="hljs-string">f&quot;<span class="hljs-subst">{pi:<span class="hljs-number">.2</span>f}</span>&quot;</span>;
 
 <span class="hljs-comment"># f-string with nested braces and format spec</span>
-complex_fmt = <span class="hljs-string">f&quot;outer <span class="hljs-subst">{x: <span class="hljs-subst">{y:.2f}</span>}</span> end&quot;</span>;
+complex_fmt = <span class="hljs-string">f&quot;outer <span class="hljs-subst">{x: <span class="hljs-subst">{y:<span class="hljs-number">.2</span>f}</span>}</span> end&quot;</span>;

@@ -1,0 +1,8 @@
+# Dict spread inside f-string substitution
+x = f"{**data, **more}";
+
+# Dict with spread and normal keys
+y = f"{a: 1, **b, c: 2}";
+
+# Nested dict spread
+z = f"{**{a: 1}, **{b: 2}}";

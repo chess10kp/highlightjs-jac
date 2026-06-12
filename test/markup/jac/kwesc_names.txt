@@ -1,0 +1,4 @@
+# Backtick-escaped identifiers
+`class = 5;
+obj `node {}
+def `if() {}

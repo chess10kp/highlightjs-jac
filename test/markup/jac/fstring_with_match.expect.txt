@@ -1,0 +1,8 @@
+<span class="hljs-comment"># Match/case inside f-string substitution</span>
+x = <span class="hljs-string">f&quot;<span class="hljs-subst">{<span class="hljs-keyword">match</span> x <span class="hljs-keyword">with</span> <span class="hljs-keyword">case</span> y: z}</span>&quot;</span>;
+
+<span class="hljs-comment"># Match with multiple cases</span>
+y = <span class="hljs-string">f&quot;<span class="hljs-subst">{<span class="hljs-keyword">match</span> x <span class="hljs-keyword">with</span> <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>: a <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>: b}</span>&quot;</span>;
+
+<span class="hljs-comment"># Match with default</span>
+z = <span class="hljs-string">f&quot;<span class="hljs-subst">{<span class="hljs-keyword">match</span> x <span class="hljs-keyword">with</span> <span class="hljs-keyword">case</span> y: z <span class="hljs-keyword">default</span>: w}</span>&quot;</span>;

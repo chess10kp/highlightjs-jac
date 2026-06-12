@@ -1,0 +1,8 @@
+# Range operator in f-string substitution
+x = f"{a .. b}";
+
+# Range in list comprehension
+y = f"{[i for i in 1 .. 10]}";
+
+# Range with step
+z = f"{a .. b .. c}";

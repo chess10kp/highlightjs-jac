@@ -1,0 +1,8 @@
+# Try/except inside f-string substitution
+x = f"{try x except y: z}";
+
+# Try with finally
+y = f"{try x except y finally z}";
+
+# Try with multiple excepts
+z = f"{try x except a: b except c: d}";

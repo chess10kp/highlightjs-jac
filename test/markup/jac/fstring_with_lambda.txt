@@ -1,0 +1,8 @@
+# Lambda inside f-string substitution
+x = f"{(x) => x + 1}";
+
+# Lambda with multiple params
+y = f"{(a, b) => a + b}";
+
+# Lambda with default
+z = f"{(x=1) => x * 2}";

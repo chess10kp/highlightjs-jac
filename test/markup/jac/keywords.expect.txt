@@ -101,7 +101,7 @@
 <span class="hljs-keyword">from</span> <span class="hljs-literal">...</span> <span class="hljs-keyword">import</span> something;
 
 <span class="hljs-comment"># JSX</span>
-html = &lt;div&gt;Hello&lt;/div&gt;;
+html = <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Hello<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>;
 
 <span class="hljs-string">f&quot;hello <span class="hljs-subst">{name}</span>!&quot;</span>
 <span class="hljs-string">&quot;&quot;&quot;multiline

@@ -1,0 +1,26 @@
+<span class="hljs-comment"># Number in f-string substitution</span>
+x = <span class="hljs-string">f&quot;hello <span class="hljs-subst">{<span class="hljs-number">42</span>}</span>&quot;</span>;
+
+<span class="hljs-comment"># Edge operator in f-string substitution</span>
+y = <span class="hljs-string">f&quot;hello <span class="hljs-subst">{a <span class="hljs-operator">--&gt;</span> b}</span>&quot;</span>;
+
+<span class="hljs-comment"># Self variable in f-string substitution</span>
+z = <span class="hljs-string">f&quot;hello <span class="hljs-subst">{<span class="hljs-variable language_">self</span>.name}</span>&quot;</span>;
+
+<span class="hljs-comment"># Super variable in f-string substitution</span>
+w = <span class="hljs-string">f&quot;hello <span class="hljs-subst">{<span class="hljs-variable language_">super</span>.name}</span>&quot;</span>;
+
+<span class="hljs-comment"># Backtick identifier in f-string substitution</span>
+v = <span class="hljs-string">f&quot;hello <span class="hljs-subst">{<span class="hljs-variable">`name</span>}</span>&quot;</span>;
+
+<span class="hljs-comment"># Call args in f-string substitution</span>
+u = <span class="hljs-string">f&quot;hello <span class="hljs-subst">{foo(a, b)}</span>&quot;</span>;
+
+<span class="hljs-comment"># Operator in f-string substitution</span>
+t = <span class="hljs-string">f&quot;hello <span class="hljs-subst">{a <span class="hljs-operator">+</span> b}</span>&quot;</span>;
+
+<span class="hljs-comment"># JSX in f-string substitution</span>
+s = <span class="hljs-string">f&quot;hello <span class="hljs-subst">{<span class="hljs-operator">&lt;</span>div<span class="hljs-operator">&gt;</span>x<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>div<span class="hljs-operator">&gt;</span>}</span>&quot;</span>;
+
+<span class="hljs-comment"># Nested f-string substitution</span>
+r = <span class="hljs-string">f&quot;outer <span class="hljs-subst">{<span class="hljs-variable">`a</span>: <span class="hljs-subst">{<span class="hljs-variable">`b</span>:d}</span>}</span> end&quot;</span>;

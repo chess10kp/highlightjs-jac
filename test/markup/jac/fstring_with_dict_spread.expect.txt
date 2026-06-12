@@ -1,0 +1,8 @@
+<span class="hljs-comment"># Dict spread inside f-string substitution</span>
+x = <span class="hljs-string">f&quot;<span class="hljs-subst">{<span class="hljs-operator">**</span>data, <span class="hljs-operator">**</span>more}</span>&quot;</span>;
+
+<span class="hljs-comment"># Dict with spread and normal keys</span>
+y = <span class="hljs-string">f&quot;<span class="hljs-subst">{a: <span class="hljs-number">1</span>, <span class="hljs-operator">**</span>b, c: <span class="hljs-number">2</span>}</span>&quot;</span>;
+
+<span class="hljs-comment"># Nested dict spread</span>
+z = <span class="hljs-string">f&quot;<span class="hljs-subst">{<span class="hljs-operator">**</span><span class="hljs-subst">{a: <span class="hljs-number">1</span>}</span>, <span class="hljs-operator">**</span><span class="hljs-subst">{b: <span class="hljs-number">2</span>}</span>}</span>&quot;</span>;

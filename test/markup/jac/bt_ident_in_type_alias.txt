@@ -1,0 +1,8 @@
+# type alias with backtick identifier
+type `MyType = int;
+
+# type alias with backtick in generic
+type `List<T> = list[T];
+
+# type alias with backtick as type parameter
+type Box<`T> = list[`T];

@@ -1,0 +1,8 @@
+<span class="hljs-comment"># type alias with backtick identifier</span>
+<span class="hljs-type">type</span> <span class="hljs-variable">`MyType</span> = <span class="hljs-type">int</span>;
+
+<span class="hljs-comment"># type alias with backtick in generic</span>
+<span class="hljs-type">type</span> <span class="hljs-variable">`List</span><span class="hljs-tag">&lt;<span class="hljs-name">T</span>&gt;</span> = <span class="hljs-type">list</span>[T];
+
+<span class="hljs-comment"># type alias with backtick as type parameter</span>
+<span class="hljs-type">type</span> Box<span class="hljs-operator">&lt;</span><span class="hljs-variable">`T</span><span class="hljs-operator">&gt;</span> = <span class="hljs-type">list</span>[<span class="hljs-variable">`T</span>];

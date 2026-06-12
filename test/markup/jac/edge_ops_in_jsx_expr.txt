@@ -1,0 +1,8 @@
+# Edge operators inside JSX expression
+x = <div>{a --> b}</div>;
+
+# Edge operators in JSX attribute
+y = <span>{a ++> b <-- c}</span>;
+
+# Edge ref chain in JSX
+z = <div>{a ++> b --> c}</div>;

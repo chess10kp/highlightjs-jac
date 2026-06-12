@@ -1,0 +1,7 @@
+<span class="hljs-comment"># Edge operators inside f-string substitutions</span>
+x = <span class="hljs-string">f&quot;hello <span class="hljs-subst">{a <span class="hljs-operator">--&gt;</span> b}</span>&quot;</span>;
+y = <span class="hljs-string">f&quot;hello <span class="hljs-subst">{a <span class="hljs-operator">++&gt;</span> b}</span>&quot;</span>;
+z = <span class="hljs-string">f&quot;hello <span class="hljs-subst">{a <span class="hljs-operator">--&gt;</span> b <span class="hljs-operator">&lt;--</span> c}</span>&quot;</span>;
+
+<span class="hljs-comment"># Edge ref chains inside f-string</span>
+w = <span class="hljs-string">f&quot;hello <span class="hljs-subst">{a <span class="hljs-operator">++&gt;</span> b <span class="hljs-operator">--&gt;</span> c}</span>&quot;</span>;

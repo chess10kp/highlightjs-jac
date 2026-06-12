@@ -1,0 +1,2 @@
+<span class="hljs-comment"># JSX with expression in attribute</span>
+html = <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-name">class</span>={foo <span class="hljs-operator">&gt;</span> <span class="hljs-number">5</span>}&gt;</span>Hello<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>;

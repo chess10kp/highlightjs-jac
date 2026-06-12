@@ -1,0 +1,8 @@
+<span class="hljs-comment"># Assignment operator in f-string substitution</span>
+x = <span class="hljs-string">f&quot;<span class="hljs-subst">{a <span class="hljs-operator">=</span> <span class="hljs-number">1</span>}</span>&quot;</span>;
+
+<span class="hljs-comment"># Walrus operator in f-string substitution</span>
+y = <span class="hljs-string">f&quot;<span class="hljs-subst">{a <span class="hljs-operator">:=</span> <span class="hljs-number">1</span>}</span>&quot;</span>;
+
+<span class="hljs-comment"># Compound assignment in f-string substitution</span>
+z = <span class="hljs-string">f&quot;<span class="hljs-subst">{a <span class="hljs-operator">+=</span> <span class="hljs-number">1</span>, b <span class="hljs-operator">*=</span> <span class="hljs-number">2</span>}</span>&quot;</span>;

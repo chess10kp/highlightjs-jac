@@ -1,0 +1,11 @@
+# List comprehension inside f-string substitution
+x = f"{[i for i in range(10)]}";
+
+# Dict comprehension inside f-string substitution
+y = f"{{k: v for k, v in items}}";
+
+# Set comprehension inside f-string substitution
+z = f"{{i * 2 for i in items}}";
+
+# Generator expression inside f-string substitution
+w = f"{(i for i in range(10))}";

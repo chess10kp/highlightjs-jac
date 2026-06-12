@@ -1,0 +1,11 @@
+<span class="hljs-comment"># JSX inside f-string substitution</span>
+x = <span class="hljs-string">f&quot;hello <span class="hljs-subst">{<span class="hljs-operator">&lt;</span>div<span class="hljs-operator">&gt;</span>x<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>div<span class="hljs-operator">&gt;</span>}</span>&quot;</span>;
+
+<span class="hljs-comment"># JSX self-closing inside f-string substitution</span>
+y = <span class="hljs-string">f&quot;hello <span class="hljs-subst">{<span class="hljs-operator">&lt;</span>img <span class="hljs-operator">/</span><span class="hljs-operator">&gt;</span>}</span>&quot;</span>;
+
+<span class="hljs-comment"># JSX fragment inside f-string substitution</span>
+z = <span class="hljs-string">f&quot;hello <span class="hljs-subst">{<span class="hljs-operator">&lt;</span><span class="hljs-operator">&gt;</span>Hello<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span><span class="hljs-operator">&gt;</span>}</span>&quot;</span>;
+
+<span class="hljs-comment"># JSX with attributes inside f-string substitution</span>
+w = <span class="hljs-string">f&quot;hello <span class="hljs-subst">{<span class="hljs-operator">&lt;</span>div <span class="hljs-keyword">class</span><span class="hljs-operator">=</span><span class="hljs-string">&quot;foo&quot;</span><span class="hljs-operator">&gt;</span>x<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>div<span class="hljs-operator">&gt;</span>}</span>&quot;</span>;

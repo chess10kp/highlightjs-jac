@@ -1,0 +1,7 @@
+<span class="hljs-comment"># Decorator with backtick name</span>
+<span class="hljs-meta">@<span class="hljs-variable">`decorator</span></span>
+<span class="hljs-keyword">can</span> <span class="hljs-title function_">foo</span>() {}
+
+<span class="hljs-comment"># Decorator with backtick in call args</span>
+<span class="hljs-meta">@decorator(<span class="hljs-params"><span class="hljs-variable">`arg</span></span>)</span>
+<span class="hljs-keyword">can</span> <span class="hljs-title function_">bar</span>() {}

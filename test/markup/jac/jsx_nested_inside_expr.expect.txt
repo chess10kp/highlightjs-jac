@@ -1,0 +1,8 @@
+<span class="hljs-comment"># Nested JSX inside JSX attribute expression</span>
+x = <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-name">data</span>={<span class="hljs-operator">&lt;</span>span<span class="hljs-operator">&gt;</span>{x}<span class="hljs-operator">&lt;</span><span class="hljs-operator">/</span>span<span class="hljs-operator">&gt;</span>}&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>;
+
+<span class="hljs-comment"># Nested JSX inside JSX child expression</span>
+y = <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{<span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Hello<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>;
+
+<span class="hljs-comment"># Deeply nested JSX</span>
+z = <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{<span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{<span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>bold<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span>}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>;

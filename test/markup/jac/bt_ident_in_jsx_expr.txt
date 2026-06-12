@@ -1,0 +1,8 @@
+# Backtick identifier in JSX expression
+x = <div>{`name}</div>;
+
+# Backtick identifier in JSX attribute expression
+y = <img alt={`label} />;
+
+# Multiple backtick identifiers in JSX
+z = <div>{`a + `b}</div>;

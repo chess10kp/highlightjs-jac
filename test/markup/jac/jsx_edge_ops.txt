@@ -1,0 +1,10 @@
+# JSX tags that look like edge operators
+x = <div> --> </div>;
+y = <span> ++> </span>;
+z = <img />;
+
+# Nested JSX with operators
+a = <div><span> -- </span></div>;
+
+# Edge operators mixed with JSX
+b = <div> a --> b </div>;

@@ -1,0 +1,8 @@
+# Match/case inside f-string substitution
+x = f"{match x with case y: z}";
+
+# Match with multiple cases
+y = f"{match x with case 1: a case 2: b}";
+
+# Match with default
+z = f"{match x with case y: z default: w}";

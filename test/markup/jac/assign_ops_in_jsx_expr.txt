@@ -1,0 +1,8 @@
+# Assignment operator inside JSX expression
+x = <div>{a = 1}</div>;
+
+# Walrus operator inside JSX expression
+y = <span>{a := 1}</span>;
+
+# Compound assignment inside JSX expression
+z = <div>{a += 1, b *= 2}</div>;

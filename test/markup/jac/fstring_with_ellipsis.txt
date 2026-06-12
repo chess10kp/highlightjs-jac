@@ -1,0 +1,8 @@
+# Ellipsis inside f-string substitution
+x = f"{...}";
+
+# Ellipsis in function call inside f-string
+y = f"{foo(...)}";
+
+# Ellipsis in assignment inside f-string
+z = f"{a = ...}";

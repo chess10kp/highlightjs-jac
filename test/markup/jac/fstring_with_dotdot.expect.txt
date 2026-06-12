@@ -1,0 +1,8 @@
+<span class="hljs-comment"># Range operator in f-string substitution</span>
+x = <span class="hljs-string">f&quot;<span class="hljs-subst">{a <span class="hljs-operator">..</span> b}</span>&quot;</span>;
+
+<span class="hljs-comment"># Range in list comprehension</span>
+y = <span class="hljs-string">f&quot;<span class="hljs-subst">{[i <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-number">1</span> <span class="hljs-operator">..</span> <span class="hljs-number">10</span>]}</span>&quot;</span>;
+
+<span class="hljs-comment"># Range with step</span>
+z = <span class="hljs-string">f&quot;<span class="hljs-subst">{a <span class="hljs-operator">..</span> b <span class="hljs-operator">..</span> c}</span>&quot;</span>;

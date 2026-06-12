@@ -1,0 +1,6 @@
+# Comments inside JSX expressions
+x = <div>{# comment here
+    a + b}</div>;
+
+# Block comments inside JSX
+y = <div>{/* block comment */ a + b}</div>;

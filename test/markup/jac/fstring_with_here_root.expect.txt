@@ -1,0 +1,8 @@
+<span class="hljs-comment"># here in f-string substitution</span>
+x = <span class="hljs-string">f&quot;<span class="hljs-subst">{<span class="hljs-variable language_">here</span>}</span>&quot;</span>;
+
+<span class="hljs-comment"># root in f-string substitution</span>
+y = <span class="hljs-string">f&quot;<span class="hljs-subst">{<span class="hljs-variable language_">root</span>}</span>&quot;</span>;
+
+<span class="hljs-comment"># visitor in f-string substitution</span>
+z = <span class="hljs-string">f&quot;<span class="hljs-subst">{<span class="hljs-variable language_">visitor</span>}</span>&quot;</span>;

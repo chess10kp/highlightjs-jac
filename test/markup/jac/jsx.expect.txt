@@ -1,17 +1,17 @@
 <span class="hljs-comment"># JSX</span>
-html = &lt;div&gt;Hello&lt;/div&gt;;
+html = <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Hello<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>;
 
 <span class="hljs-comment"># JSX with attributes</span>
-html = &lt;div class=<span class="hljs-string">&quot;foo&quot;</span>&gt;Hello&lt;/div&gt;;
+html = <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-name">class</span>=<span class="hljs-string">&quot;foo&quot;</span>&gt;</span>Hello<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>;
 
 <span class="hljs-comment"># JSX with self-closing</span>
-html = &lt;img /&gt;;
+html = <span class="hljs-tag">&lt;<span class="hljs-name">img</span> /&gt;</span>;
 
 <span class="hljs-comment"># JSX with fragment</span>
-html = &lt;&gt;Hello&lt;/&gt;;
+html = <span class="hljs-tag">&lt;&gt;</span>Hello<span class="hljs-tag">&lt;/&gt;</span>;
 
 <span class="hljs-comment"># JSX with expression</span>
-html = &lt;div&gt;{name}&lt;/div&gt;;
+html = <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{name}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>;
 
 <span class="hljs-comment"># JSX with control flow</span>
-html = &lt;div&gt;{<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> items { &lt;span&gt;{i}&lt;/span&gt; }}&lt;/div&gt;;
+html = <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> items { <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{i}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> }}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>;

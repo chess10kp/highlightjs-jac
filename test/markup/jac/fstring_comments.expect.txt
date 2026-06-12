@@ -1,0 +1,4 @@
+<span class="hljs-comment"># Comments inside f-string substitutions</span>
+x = <span class="hljs-string">f&quot;<span class="hljs-subst">{a <span class="hljs-operator">+</span> b <span class="hljs-comment"># add them up}&quot;;</span>
+y <span class="hljs-operator">=</span> <span class="hljs-string">f&quot;<span class="hljs-subst">{c <span class="hljs-operator">*</span> d <span class="hljs-operator">/</span><span class="hljs-operator">*</span> multiply <span class="hljs-operator">*</span><span class="hljs-operator">/</span>}</span>&quot;</span>;
+</span></span>

@@ -1,0 +1,15 @@
+<span class="hljs-comment"># Decorator with index</span>
+<span class="hljs-meta">@decorator[<span class="hljs-number">1</span>]</span>
+<span class="hljs-keyword">can</span> <span class="hljs-title function_">foo</span>() {}
+
+<span class="hljs-comment"># Decorator with method call</span>
+<span class="hljs-meta">@decorator.method(<span class="hljs-params">arg</span>)</span>
+<span class="hljs-keyword">can</span> <span class="hljs-title function_">bar</span>() {}
+
+<span class="hljs-comment"># Decorator with string arg</span>
+<span class="hljs-meta">@decorator(<span class="hljs-params"><span class="hljs-string">&quot;name&quot;</span></span>)</span>
+<span class="hljs-keyword">can</span> <span class="hljs-title function_">baz</span>() {}
+
+<span class="hljs-comment"># Decorator with number arg</span>
+<span class="hljs-meta">@decorator(<span class="hljs-params"><span class="hljs-number">42</span></span>)</span>
+<span class="hljs-keyword">can</span> <span class="hljs-title function_">qux</span>() {}

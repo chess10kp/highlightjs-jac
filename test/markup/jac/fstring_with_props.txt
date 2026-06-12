@@ -1,0 +1,8 @@
+# props in f-string substitution
+x = f"{props.name}";
+
+# props with method call
+y = f"{props.foo()}";
+
+# props with nested access
+z = f"{props.a.b}";

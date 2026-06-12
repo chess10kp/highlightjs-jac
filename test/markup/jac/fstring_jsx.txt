@@ -1,0 +1,11 @@
+# JSX inside f-string substitution
+x = f"hello {<div>x</div>}";
+
+# JSX self-closing inside f-string substitution
+y = f"hello {<img />}";
+
+# JSX fragment inside f-string substitution
+z = f"hello {<>Hello</>}";
+
+# JSX with attributes inside f-string substitution
+w = f"hello {<div class="foo">x</div>}";

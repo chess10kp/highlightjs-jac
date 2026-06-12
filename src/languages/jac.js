@@ -9,6 +9,9 @@ Category: common
 export default function(hljs) {
   const regex = hljs.regex;
   const IDENT_RE = /[\p{XID_Start}_]\p{XID_Continue}*/u;
+  const BT_IDENT_RE = /`[\p{XID_Start}_]\p{XID_Continue}*/u;
+  const ANY_IDENT_RE = new RegExp('(?:' + BT_IDENT_RE.source + '|' + IDENT_RE.source + ')', 'u');
+  const BT_IDENT = { match: BT_IDENT_RE, scope: 'variable' };
 
   const RESERVED_WORDS = [
     // archetypes
@@ -112,6 +115,7 @@ export default function(hljs) {
     'chr',
     'classmethod',
     'compile',
+    'complex',
     'delattr',
     'dict',
     'dir',
@@ -120,14 +124,18 @@ export default function(hljs) {
     'eval',
     'exec',
     'filter',
+    'float',
     'format',
+    'frozenset',
     'getattr',
     'globals',
     'hasattr',
     'hash',
     'help',
+    'hex',
     'id',
     'input',
+    'int',
     'isinstance',
     'issubclass',
     'iter',
@@ -136,9 +144,11 @@ export default function(hljs) {
     'locals',
     'map',
     'max',
+    'memoryview',
     'min',
     'next',
     'object',
+    'oct',
     'open',
     'ord',
     'pow',
@@ -153,7 +163,11 @@ export default function(hljs) {
     'slice',
     'sorted',
     'staticmethod',
+    'str',
     'sum',
+    'super',
+    'tuple',
+    'type',
     'vars',
     'zip'
   ];
@@ -214,12 +228,11 @@ export default function(hljs) {
     className: 'subst',
     begin: /\{/,
     end: /\}/,
-    keywords: KEYWORDS,
-    illegal: /#/
+    keywords: KEYWORDS
   };
 
   const LITERAL_BRACKET = {
-    begin: /\{\{/,
+    match: /\{\{|\}\}/,
     relevance: 0
   };
 
@@ -350,7 +363,7 @@ export default function(hljs) {
     ]
   };
 
-  const classNameIdent = new RegExp('(?!\\b(?:' + RESERVED_WORDS.join('|') + ')\\b)' + IDENT_RE.source, 'u');
+  const classNameIdent = new RegExp('(?:' + BT_IDENT_RE.source + ')|(?:(?!\\b(?:' + RESERVED_WORDS.join('|') + ')\\b)' + IDENT_RE.source + ')', 'u');
 
   // Edge and connect operators (graph syntax in Jac)
   // Spec: -->  <--  <-->  ++>  <++  <++>  ->:  <-:  +>:  <+:
@@ -364,23 +377,6 @@ export default function(hljs) {
   // Note: => is excluded because it is in the illegal pattern.
   // Note: = is excluded from the main operator because it is only
   // highlighted as operator inside function call arguments.
-  const JSX = {
-    begin: /<[A-Za-z_\/!]/,
-    end: />/,
-    relevance: 0,
-    contains: [
-      STRING,
-      NUMBER,
-      BLOCK_COMMENT,
-      LINE_COMMENT
-    ]
-  };
-
-  const JSX_FRAGMENT = {
-    match: /<>|<\/>/,
-    relevance: 0
-  };
-
   const OPERATOR = {
     className: 'operator',
     match: /:=|\+=|-=|\*=|\/=|\/\/=|%=|\*\*=|@=|&=|\|=|\^=|<<=|>>=|\|>|<\||:>|<:|==|!=|<=|>=|\*\*|\/\/|<<|>>|\+\+|--|&&|\|\||\.>|<\.|\.\.|->|\+|-|\*|\/|%|@|<|>|!|&|\||\^|~|\?(?!\w)/
@@ -396,6 +392,20 @@ export default function(hljs) {
     match: /\b(self|props|super|here|root|visitor)\b/
   };
 
+  // Shared content list for parenthesized argument contexts
+  const PARENS_CONTAINS = [
+    'self',
+    NUMBER,
+    STRING,
+    BLOCK_COMMENT,
+    LINE_COMMENT,
+    EDGE_OPERATOR,
+    OPERATOR,
+    ASSIGN_OPERATOR,
+    SELF_VAR,
+    BT_IDENT
+  ];
+
   const PARAMS = {
     className: 'params',
     variants: [
@@ -410,16 +420,7 @@ export default function(hljs) {
         excludeBegin: true,
         excludeEnd: true,
         keywords: KEYWORDS,
-        contains: [
-          'self',
-          NUMBER,
-          STRING,
-          BLOCK_COMMENT,
-          LINE_COMMENT,
-          OPERATOR,
-          ASSIGN_OPERATOR,
-          SELF_VAR
-        ]
+        contains: PARENS_CONTAINS
       }
     ]
   };
@@ -430,21 +431,109 @@ export default function(hljs) {
     excludeBegin: true,
     excludeEnd: true,
     keywords: KEYWORDS,
+    contains: PARENS_CONTAINS
+  };
+
+  const JSX_FRAGMENT = {
+    scope: 'tag',
+    match: /<>|<\/>/,
+    relevance: 0
+  };
+
+  const JSX_EXPR_INNER = {
+    begin: /\{/,
+    end: /\}/,
+    keywords: KEYWORDS,
     contains: [
-      'self',
-      NUMBER,
       STRING,
+      NUMBER,
       BLOCK_COMMENT,
       LINE_COMMENT,
+      EDGE_OPERATOR,
       OPERATOR,
-      ASSIGN_OPERATOR,
-      SELF_VAR
+      CALL_ARGS,
+      'self',
+      SELF_VAR,
+      BT_IDENT,
+      JSX_FRAGMENT
+    ]
+  };
+
+  const JSX_EXPR = {
+    begin: /\{/,
+    end: /\}/,
+    keywords: KEYWORDS,
+    contains: [
+      STRING,
+      NUMBER,
+      BLOCK_COMMENT,
+      LINE_COMMENT,
+      EDGE_OPERATOR,
+      OPERATOR,
+      CALL_ARGS,
+      'self',
+      SELF_VAR,
+      BT_IDENT,
+      JSX_FRAGMENT,
+      JSX_EXPR_INNER
+    ]
+  };
+
+  const JSX = {
+    scope: 'tag',
+    begin: /<(?=[A-Za-z_\/!])/,
+    end: />/,
+    relevance: 0,
+    contains: [
+      { scope: 'name', begin: /[A-Za-z_][A-Za-z0-9_]*/ },
+      STRING,
+      NUMBER,
+      BLOCK_COMMENT,
+      LINE_COMMENT,
+      JSX_EXPR
+    ]
+  };
+
+  // Enable recursive JSX inside expressions
+  JSX_EXPR.contains.push(JSX);
+  JSX_EXPR_INNER.contains.push(JSX);
+
+  const DECORATOR = {
+    className: 'meta',
+    begin: /^[\t ]*@/,
+    end: /(?=#)|$/,
+    contains: [
+      NUMBER,
+      PARAMS,
+      STRING,
+      BT_IDENT
+    ]
+  };
+
+  const DECORATOR_INLINE = {
+    scope: 'meta',
+    begin: /(?<![A-Za-z0-9_])@/,
+    end: /(?=[\s;}\])])/,
+    contains: [
+      BT_IDENT
     ]
   };
 
   SUBST.contains = [
     'self',
-    STRING
+    STRING,
+    NUMBER,
+    BLOCK_COMMENT,
+    LINE_COMMENT,
+    EDGE_OPERATOR,
+    OPERATOR,
+    ASSIGN_OPERATOR,
+    CALL_ARGS,
+    SELF_VAR,
+    BT_IDENT,
+    JSX_FRAGMENT,
+    JSX,
+    DECORATOR_INLINE
   ];
 
   return {
@@ -459,6 +548,7 @@ export default function(hljs) {
       NUMBER,
       EDGE_OPERATOR,
       SELF_VAR,
+      BT_IDENT,
       {
         // eat "if" prior to string so that it won't accidentally be
         // labeled as an f-string
@@ -472,22 +562,13 @@ export default function(hljs) {
       LINE_COMMENT,
       JSX_FRAGMENT,
       JSX,
-      {
-        className: 'meta',
-        begin: /^[\t ]*@/,
-        end: /(?=#)|$/,
-        contains: [
-          NUMBER,
-          PARAMS,
-          STRING
-        ]
-      },
+      DECORATOR,
       OPERATOR,
       CALL_ARGS,
       {
         match: [
           /\b(?:def|can)\b/, /\s+/,
-          IDENT_RE
+          ANY_IDENT_RE
         ],
         scope: {
           1: 'keyword',

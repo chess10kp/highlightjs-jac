@@ -1,0 +1,8 @@
+# Assignment operator in f-string substitution
+x = f"{a = 1}";
+
+# Walrus operator in f-string substitution
+y = f"{a := 1}";
+
+# Compound assignment in f-string substitution
+z = f"{a += 1, b *= 2}";

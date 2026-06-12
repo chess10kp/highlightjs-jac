@@ -1,0 +1,8 @@
+<span class="hljs-comment"># Lambda inside f-string substitution</span>
+x = <span class="hljs-string">f&quot;<span class="hljs-subst">{(x) <span class="hljs-operator">=</span><span class="hljs-operator">&gt;</span> x <span class="hljs-operator">+</span> <span class="hljs-number">1</span>}</span>&quot;</span>;
+
+<span class="hljs-comment"># Lambda with multiple params</span>
+y = <span class="hljs-string">f&quot;<span class="hljs-subst">{(a, b) <span class="hljs-operator">=</span><span class="hljs-operator">&gt;</span> a <span class="hljs-operator">+</span> b}</span>&quot;</span>;
+
+<span class="hljs-comment"># Lambda with default</span>
+z = <span class="hljs-string">f&quot;<span class="hljs-subst">{(x<span class="hljs-operator">=</span><span class="hljs-number">1</span>) <span class="hljs-operator">=</span><span class="hljs-operator">&gt;</span> x <span class="hljs-operator">*</span> <span class="hljs-number">2</span>}</span>&quot;</span>;

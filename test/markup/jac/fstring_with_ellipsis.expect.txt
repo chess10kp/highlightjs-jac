@@ -1,0 +1,8 @@
+<span class="hljs-comment"># Ellipsis inside f-string substitution</span>
+x = <span class="hljs-string">f&quot;<span class="hljs-subst">{<span class="hljs-operator">..</span>.}</span>&quot;</span>;
+
+<span class="hljs-comment"># Ellipsis in function call inside f-string</span>
+y = <span class="hljs-string">f&quot;<span class="hljs-subst">{foo(<span class="hljs-operator">..</span>.)}</span>&quot;</span>;
+
+<span class="hljs-comment"># Ellipsis in assignment inside f-string</span>
+z = <span class="hljs-string">f&quot;<span class="hljs-subst">{a <span class="hljs-operator">=</span> <span class="hljs-operator">..</span>.}</span>&quot;</span>;

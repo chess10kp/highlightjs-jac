@@ -1,0 +1,2 @@
+# JSX with expression in attribute
+html = <div class={foo > 5}>Hello</div>;

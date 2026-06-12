@@ -1,0 +1,9 @@
+# Edge operator in parameter default
+def foo(a = b --> c) {
+    pass;
+}
+
+# Edge ref chain in parameter default
+def bar(a = b ++> c <-- d) {
+    pass;
+}

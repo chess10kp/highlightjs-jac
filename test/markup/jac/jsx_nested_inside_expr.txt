@@ -1,0 +1,8 @@
+# Nested JSX inside JSX attribute expression
+x = <div data={<span>{x}</span>}></div>;
+
+# Nested JSX inside JSX child expression
+y = <div>{<span>Hello</span>}</div>;
+
+# Deeply nested JSX
+z = <div>{<span>{<b>bold</b>}</span>}</div>;

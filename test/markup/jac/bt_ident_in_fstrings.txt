@@ -1,0 +1,8 @@
+# Backtick identifier in f-string
+x = f"hello {`name}";
+
+# Backtick identifier in f-string with format spec
+y = f"value: {`x:.2f}";
+
+# Backtick identifier in nested f-string substitution
+z = f"outer {`a: {`b:d}} end";

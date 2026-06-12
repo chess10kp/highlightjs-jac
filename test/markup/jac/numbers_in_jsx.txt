@@ -1,0 +1,8 @@
+# Numbers inside JSX expressions
+x = <div>{42}</div>;
+
+# Numbers inside JSX attributes
+y = <img width={100} height={3.14} />;
+
+# Hex and scientific in JSX
+z = <div>{0xFF} {1e-10}</div>;

@@ -1,0 +1,8 @@
+# Edge operator in function call
+foo(a --> b);
+
+# Edge ref chain in function call
+bar(a ++> b <-- c);
+
+# Edge operator with connect
+global(a --> b, c ++> d);

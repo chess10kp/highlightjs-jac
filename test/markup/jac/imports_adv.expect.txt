@@ -26,4 +26,4 @@
 <span class="hljs-keyword">import</span> { <span class="hljs-string">&quot;foo&quot;</span> } <span class="hljs-keyword">from</span> math;
 
 <span class="hljs-comment"># import with kwesc name</span>
-<span class="hljs-keyword">import</span> { `name` } <span class="hljs-keyword">from</span> math;
+<span class="hljs-keyword">import</span> { <span class="hljs-variable">`class</span> } <span class="hljs-keyword">from</span> math;

@@ -1,0 +1,8 @@
+<span class="hljs-comment"># Edge operators inside JSX expression</span>
+x = <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{a <span class="hljs-operator">--&gt;</span> b}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>;
+
+<span class="hljs-comment"># Edge operators in JSX attribute</span>
+y = <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{a <span class="hljs-operator">++&gt;</span> b <span class="hljs-operator">&lt;--</span> c}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>;
+
+<span class="hljs-comment"># Edge ref chain in JSX</span>
+z = <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{a <span class="hljs-operator">++&gt;</span> b <span class="hljs-operator">--&gt;</span> c}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>;

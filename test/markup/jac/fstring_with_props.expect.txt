@@ -1,0 +1,8 @@
+<span class="hljs-comment"># props in f-string substitution</span>
+x = <span class="hljs-string">f&quot;<span class="hljs-subst">{<span class="hljs-variable language_">props</span>.name}</span>&quot;</span>;
+
+<span class="hljs-comment"># props with method call</span>
+y = <span class="hljs-string">f&quot;<span class="hljs-subst">{<span class="hljs-variable language_">props</span>.foo()}</span>&quot;</span>;
+
+<span class="hljs-comment"># props with nested access</span>
+z = <span class="hljs-string">f&quot;<span class="hljs-subst">{<span class="hljs-variable language_">props</span>.a.b}</span>&quot;</span>;

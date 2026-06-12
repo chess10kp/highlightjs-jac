@@ -1,0 +1,3 @@
+<span class="hljs-comment"># Type alias</span>
+
+<span class="hljs-type">type</span> Foo = <span class="hljs-type">int</span>;
