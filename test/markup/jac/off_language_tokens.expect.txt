@@ -1,0 +1,7 @@
+<span class="hljs-comment"># `del` is the keyword, `delete` is a plain identifier</span>
+<span class="hljs-keyword">del</span> x;
+delete = <span class="hljs-number">1</span>;
+
+<span class="hljs-comment"># Jac uses `and`/`or`, not `&amp;&amp;`/`||`; `&amp;` and `|` are bitwise operators</span>
+a <span class="hljs-keyword">and</span> b <span class="hljs-keyword">or</span> c;
+x <span class="hljs-operator">&amp;</span> y <span class="hljs-operator">|</span> z;

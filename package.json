@@ -3,16 +3,30 @@
   "description": "Jac language definition for highlight.js",
   "keywords": [
     "highlight.js",
+    "highlightjs",
     "jac",
-    "syntax"
+    "jaseci",
+    "syntax",
+    "highlight"
   ],
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "author": "Nitin Shankar Madhu",
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "./src/languages/jac.js",
   "exports": {
-    ".": "./src/languages/jac.js"
+    ".": "./src/languages/jac.js",
+    "./dist/jac.min.js": "./dist/jac.min.js",
+    "./dist/jac.es.min.js": "./dist/jac.es.min.js"
   },
+  "unpkg": "./dist/jac.min.js",
+  "jsdelivr": "./dist/jac.min.js",
+  "files": [
+    "src",
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/jaseci/highlightjs-jac.git"
@@ -21,7 +35,9 @@
     "url": "https://github.com/jaseci/highlightjs-jac/issues"
   },
   "scripts": {
-    "test": "node test/index.js"
+    "build": "node tools/build.js",
+    "test": "node test/index.js",
+    "prepublishOnly": "npm run build && npm test"
   },
   "peerDependencies": {
     "highlight.js": ">=11.0.0"
@@ -29,6 +45,7 @@
   "devDependencies": {
     "glob": "^10.5.0",
     "highlight.js": "^11.0.0",
-    "mocha": "^10.0.0"
+    "rollup": "^4.61.1",
+    "terser": "^5.48.0"
   }
 }

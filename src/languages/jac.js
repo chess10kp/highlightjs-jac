@@ -94,37 +94,32 @@ export default function(hljs) {
     'report',
     'skip',
     'assert',
-    'delete',
     'flow',
     'wait',
     'impl'
   ];
 
   // Python built-ins Jac inherits since it compiles to Python.
+  // Words that are also Jac builtin types (str, int, list, ...) live in
+  // TYPES below, not here, so each identifier resolves to a single scope.
   const BUILT_INS = [
     '__import__',
     'all',
-    'any',
     'ascii',
     'bin',
-    'bool',
     'breakpoint',
     'bytearray',
-    'bytes',
     'callable',
     'chr',
     'classmethod',
     'compile',
-    'complex',
     'delattr',
-    'dict',
     'dir',
     'divmod',
     'enumerate',
     'eval',
     'exec',
     'filter',
-    'float',
     'format',
     'frozenset',
     'getattr',
@@ -135,12 +130,10 @@ export default function(hljs) {
     'hex',
     'id',
     'input',
-    'int',
     'isinstance',
     'issubclass',
     'iter',
     'len',
-    'list',
     'locals',
     'map',
     'max',
@@ -158,16 +151,12 @@ export default function(hljs) {
     'repr',
     'reversed',
     'round',
-    'set',
     'setattr',
     'slice',
     'sorted',
     'staticmethod',
-    'str',
     'sum',
     'super',
-    'tuple',
-    'type',
     'vars',
     'zip'
   ];
@@ -379,7 +368,7 @@ export default function(hljs) {
   // highlighted as operator inside function call arguments.
   const OPERATOR = {
     className: 'operator',
-    match: /:=|\+=|-=|\*=|\/=|\/\/=|%=|\*\*=|@=|&=|\|=|\^=|<<=|>>=|\|>|<\||:>|<:|==|!=|<=|>=|\*\*|\/\/|<<|>>|\+\+|--|&&|\|\||\.>|<\.|\.\.|->|\+|-|\*|\/|%|@|<|>|!|&|\||\^|~|\?(?!\w)/
+    match: /:=|\+=|-=|\*=|\/=|\/\/=|%=|\*\*=|@=|&=|\|=|\^=|<<=|>>=|\|>|<\||:>|<:|==|!=|<=|>=|\*\*|\/\/|<<|>>|\+\+|--|\.>|<\.|\.\.|->|\+|-|\*|\/|%|@|<|>|!|&|\||\^|~|\?(?!\w)/
   };
 
   const ASSIGN_OPERATOR = {
@@ -510,15 +499,6 @@ export default function(hljs) {
     ]
   };
 
-  const DECORATOR_INLINE = {
-    scope: 'meta',
-    begin: /(?<![A-Za-z0-9_])@/,
-    end: /(?=[\s;}\])])/,
-    contains: [
-      BT_IDENT
-    ]
-  };
-
   SUBST.contains = [
     'self',
     STRING,
@@ -532,8 +512,7 @@ export default function(hljs) {
     SELF_VAR,
     BT_IDENT,
     JSX_FRAGMENT,
-    JSX,
-    DECORATOR_INLINE
+    JSX
   ];
 
   return {

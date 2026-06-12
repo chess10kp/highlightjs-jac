@@ -5,9 +5,8 @@ reference/
 # Dependencies
 node_modules/
 
-# Build output
+# Build output (dist/ is committed -- it is the published CDN distributable)
 build/
-dist/
 
 # Editor / OS noise
 .DS_Store

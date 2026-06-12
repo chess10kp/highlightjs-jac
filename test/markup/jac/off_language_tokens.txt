@@ -1,0 +1,7 @@
+# `del` is the keyword, `delete` is a plain identifier
+del x;
+delete = 1;
+
+# Jac uses `and`/`or`, not `&&`/`||`; `&` and `|` are bitwise operators
+a and b or c;
+x & y | z;
