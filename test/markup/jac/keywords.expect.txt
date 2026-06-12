@@ -1,8 +1,108 @@
-<span class="hljs-comment"># TODO: replace with expected highlighted output for keywords.txt</span>
+<span class="hljs-comment"># Block comment test</span>
+<span class="hljs-comment">#* multiline
+   comment *#</span>
+
 <span class="hljs-keyword">obj</span> <span class="hljs-title class_">Greeter</span> {
     <span class="hljs-keyword">has</span> name: <span class="hljs-type">str</span> = <span class="hljs-string">&quot;world&quot;</span>;
 
     <span class="hljs-keyword">can</span> <span class="hljs-title function_">greet</span>() {
-        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;hello, &quot;</span> + self.name);
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;hello, &quot;</span> <span class="hljs-operator">+</span> <span class="hljs-variable language_">self</span>.name);
     }
 }
+
+<span class="hljs-keyword">node</span> <span class="hljs-title class_">User</span> : Greeter {
+    <span class="hljs-keyword">can</span> <span class="hljs-title function_">init</span>() {
+        <span class="hljs-variable language_">super</span>.<span class="hljs-keyword">init</span>();
+    }
+}
+
+<span class="hljs-keyword">walker</span> <span class="hljs-title class_">Walk</span> {
+    <span class="hljs-keyword">can</span> <span class="hljs-title function_">route</span> <span class="hljs-keyword">with</span> <span class="hljs-variable language_">root</span> <span class="hljs-keyword">entry</span> {
+        <span class="hljs-variable language_">root</span> <span class="hljs-operator">--&gt;</span> <span class="hljs-keyword">node</span>;
+        <span class="hljs-keyword">visit</span> [<span class="hljs-operator">--&gt;</span>];
+    }
+}
+
+<span class="hljs-meta">@ ability</span>
+<span class="hljs-keyword">can</span> <span class="hljs-title function_">foo</span>() {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span> <span class="hljs-keyword">if</span> <span class="hljs-variable language_">self</span>.x <span class="hljs-operator">&gt;</span> <span class="hljs-number">0</span> <span class="hljs-keyword">else</span> <span class="hljs-literal">None</span>;
+}
+
+<span class="hljs-keyword">if</span> <span class="hljs-literal">True</span> {
+    <span class="hljs-keyword">pass</span>;
+}
+
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>) {
+    <span class="hljs-keyword">break</span>;
+}
+
+<span class="hljs-keyword">while</span> <span class="hljs-literal">False</span> {
+    <span class="hljs-keyword">continue</span>;
+}
+
+<span class="hljs-keyword">try</span> {
+    <span class="hljs-keyword">raise</span> Error(<span class="hljs-string">&quot;fail&quot;</span>);
+} <span class="hljs-keyword">except</span> Error <span class="hljs-keyword">as</span> e {
+    <span class="hljs-built_in">print</span>(e);
+} <span class="hljs-keyword">finally</span> {
+    cleanup();
+}
+
+<span class="hljs-keyword">import</span> <span class="hljs-type">type</span> <span class="hljs-keyword">from</span> math { pi }
+
+<span class="hljs-keyword">lambda</span> x: <span class="hljs-type">int</span> <span class="hljs-operator">-&gt;</span> x <span class="hljs-operator">+</span> <span class="hljs-number">1</span>
+
+<span class="hljs-keyword">async</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">fetch</span>() {
+    <span class="hljs-keyword">await</span> data;
+}
+
+<span class="hljs-comment">#* nested block
+# comment inside *#</span>
+
+<span class="hljs-comment"># Additional constructs</span>
+<span class="hljs-keyword">edge</span> <span class="hljs-title class_">Link</span>;
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Shape</span> {
+    <span class="hljs-keyword">can</span> <span class="hljs-title function_">draw</span>() {
+        <span class="hljs-keyword">pass</span>;
+    }
+}
+
+<span class="hljs-keyword">enum</span> <span class="hljs-title class_">Status</span> {
+    OK = <span class="hljs-number">1</span>,
+    FAIL = <span class="hljs-number">2</span>
+}
+
+<span class="hljs-meta">@decorator(<span class="hljs-params">args</span>)</span>
+<span class="hljs-keyword">can</span> <span class="hljs-title function_">bar</span>() {
+    <span class="hljs-keyword">yield</span> x;
+    <span class="hljs-keyword">await</span> async_task();
+}
+
+<span class="hljs-keyword">with</span> file <span class="hljs-keyword">as</span> f {
+    f.read();
+}
+
+<span class="hljs-keyword">match</span> x {
+    <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>: do_something();
+    <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>: do_else();
+    <span class="hljs-keyword">default</span>: fallback();
+}
+
+<span class="hljs-keyword">assert</span> condition, <span class="hljs-string">&quot;message&quot;</span>;
+
+<span class="hljs-keyword">global</span> x;
+<span class="hljs-keyword">nonlocal</span> y;
+
+<span class="hljs-keyword">visit</span> [<span class="hljs-operator">--&gt;</span>];
+<span class="hljs-keyword">report</span> result;
+
+<span class="hljs-comment"># Ellipsis</span>
+<span class="hljs-keyword">from</span> <span class="hljs-literal">...</span> <span class="hljs-keyword">import</span> something;
+
+<span class="hljs-comment"># JSX</span>
+html = &lt;div&gt;Hello&lt;/div&gt;;
+
+<span class="hljs-string">f&quot;hello <span class="hljs-subst">{name}</span>!&quot;</span>
+<span class="hljs-string">&quot;&quot;&quot;multiline
+string&quot;&quot;&quot;</span>

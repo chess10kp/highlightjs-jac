@@ -1,0 +1,32 @@
+# type alias
+type alias Foo = int;
+
+# glob
+glob x: int = 5;
+
+# sem
+sem foo = "bar";
+
+# impl
+impl Foo.bar() {}
+
+# test
+test "hello" {
+    assert True;
+}
+
+# with entry
+with entry {
+    print("hello");
+}
+
+# with exit
+with exit {
+    cleanup();
+}
+
+# visit with colon
+visit :expr: node;
+
+# report
+report result;

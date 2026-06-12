@@ -1,0 +1,17 @@
+# JSX
+html = <div>Hello</div>;
+
+# JSX with attributes
+html = <div class="foo">Hello</div>;
+
+# JSX with self-closing
+html = <img />;
+
+# JSX with fragment
+html = <>Hello</>;
+
+# JSX with expression
+html = <div>{name}</div>;
+
+# JSX with control flow
+html = <div>{for i in items { <span>{i}</span> }}</div>;

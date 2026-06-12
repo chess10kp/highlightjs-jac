@@ -1,0 +1,8 @@
+# Parameterized edge operators
+a ->: filter :-> b;
+c <-: filter :<- d;
+e +>: filter :+> f;
+g <+: filter :<+ h;
+
+# Edge with complex filter
+node1 ->: (type == "foo") :-> node2;

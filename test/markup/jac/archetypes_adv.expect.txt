@@ -1,0 +1,18 @@
+<span class="hljs-comment"># Async archetype</span>
+<span class="hljs-keyword">async</span> <span class="hljs-keyword">node</span> <span class="hljs-title class_">Foo</span> {}
+
+<span class="hljs-comment"># Access tag</span>
+<span class="hljs-keyword">obj</span>:<span class="hljs-keyword">pub</span> <span class="hljs-title class_">Bar</span> {}
+
+<span class="hljs-comment"># Multiple inheritance</span>
+<span class="hljs-keyword">obj</span> <span class="hljs-title class_">Qux</span>(<span class="hljs-title class_ inherited__">A</span>, <span class="hljs-title class_ inherited__">B</span>) {}
+
+<span class="hljs-comment"># Enum with type</span>
+<span class="hljs-keyword">enum</span> <span class="hljs-title class_">Status</span>: <span class="hljs-type">str</span> {
+    OK = <span class="hljs-number">1</span>;
+}
+
+<span class="hljs-comment"># Enum with inheritance</span>
+<span class="hljs-keyword">enum</span> <span class="hljs-title class_">Priority</span>(<span class="hljs-title class_ inherited__">Foo</span>) {
+    LOW = <span class="hljs-number">1</span>;
+}

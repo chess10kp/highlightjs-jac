@@ -1,0 +1,22 @@
+# Byte strings
+b = b"hello";
+br = br'hello';
+Br = Br"""hello""";
+BR = BR'''hello''';
+
+# Raw strings
+r = r"hello";
+R = R'hello';
+r = r"""hello""";
+
+# Nested f-string braces
+nested = f"value: {x: {y:d}}";
+
+# f-string with conversion
+conv = f"{name!r}";
+
+# f-string with format spec
+fmt = f"{pi:.2f}";
+
+# f-string with nested braces and format spec
+complex_fmt = f"outer {x: {y:.2f}} end";

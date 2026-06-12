@@ -1,0 +1,41 @@
+<span class="hljs-comment"># Walrus operator</span>
+x <span class="hljs-operator">:=</span> <span class="hljs-number">5</span>;
+
+<span class="hljs-comment"># Assignment operators</span>
+x <span class="hljs-operator">+=</span> <span class="hljs-number">1</span>;
+y <span class="hljs-operator">-=</span> <span class="hljs-number">2</span>;
+z <span class="hljs-operator">*=</span> <span class="hljs-number">3</span>;
+a <span class="hljs-operator">/=</span> <span class="hljs-number">4</span>;
+b <span class="hljs-operator">//=</span> <span class="hljs-number">5</span>;
+c <span class="hljs-operator">%=</span> <span class="hljs-number">6</span>;
+d <span class="hljs-operator">**=</span> <span class="hljs-number">7</span>;
+e <span class="hljs-operator">@=</span> <span class="hljs-number">8</span>;
+f <span class="hljs-operator">&amp;=</span> <span class="hljs-number">9</span>;
+g <span class="hljs-operator">|=</span> <span class="hljs-number">10</span>;
+h <span class="hljs-operator">^=</span> <span class="hljs-number">11</span>;
+i <span class="hljs-operator">&lt;&lt;=</span> <span class="hljs-number">12</span>;
+j <span class="hljs-operator">&gt;&gt;=</span> <span class="hljs-number">13</span>;
+
+<span class="hljs-comment"># Pipe operators</span>
+x <span class="hljs-operator">|&gt;</span> y;
+a <span class="hljs-operator">&lt;|</span> b;
+c <span class="hljs-operator">:&gt;</span> d;
+e <span class="hljs-operator">&lt;:</span> f;
+
+<span class="hljs-comment"># Lambda arrow</span>
+<span class="hljs-keyword">lambda</span> x <span class="hljs-operator">-&gt;</span> x <span class="hljs-operator">+</span> <span class="hljs-number">1</span>;
+
+<span class="hljs-comment"># Other operators</span>
+a <span class="hljs-operator">==</span> b;
+c <span class="hljs-operator">!=</span> d;
+e <span class="hljs-operator">&lt;=</span> f;
+g <span class="hljs-operator">&gt;=</span> h;
+i <span class="hljs-operator">&lt;&lt;</span> j;
+k <span class="hljs-operator">&gt;&gt;</span> l;
+m <span class="hljs-operator">**</span> n;
+o <span class="hljs-operator">//</span> p;
+q <span class="hljs-operator">@</span> r;
+s <span class="hljs-operator">&amp;</span> t;
+u <span class="hljs-operator">|</span> v;
+w <span class="hljs-operator">^</span> x;
+y <span class="hljs-operator">~</span> z;

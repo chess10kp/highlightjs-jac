@@ -1,0 +1,34 @@
+# match with as
+match x {
+    case y as z: do_something();
+}
+
+# match with |
+match x {
+    case 1 | 2: do_something();
+}
+
+# match with **
+match x {
+    case {"a": b, **rest}: do_something();
+}
+
+# match with *
+match x {
+    case [a, *rest]: do_something();
+}
+
+# match with class pattern
+match x {
+    case Foo(a, b): do_something();
+}
+
+# match with keyword pattern
+match x {
+    case Foo(a=b): do_something();
+}
+
+# match with if guard
+match x {
+    case y if y > 0: do_something();
+}

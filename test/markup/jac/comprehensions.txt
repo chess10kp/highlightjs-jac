@@ -1,0 +1,8 @@
+# List comprehension
+lst = [x for x in range(10) if x > 5];
+
+# Dict comprehension
+dct = {x: x*2 for x in range(10)};
+
+# Set comprehension
+s = {x for x in range(10)};

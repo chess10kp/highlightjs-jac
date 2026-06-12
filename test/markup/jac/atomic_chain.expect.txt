@@ -1,0 +1,23 @@
+<span class="hljs-comment"># Dot operators</span>
+x = foo<span class="hljs-operator">.&gt;</span>bar;
+y = foo<span class="hljs-operator">&lt;.</span>bar;
+z = foo<span class="hljs-operator">..</span>bar;
+
+<span class="hljs-comment"># Question mark</span>
+x = foo<span class="hljs-operator">?</span>;
+
+<span class="hljs-comment"># Index slice</span>
+x = foo[<span class="hljs-number">1</span>:<span class="hljs-number">2</span>:<span class="hljs-number">3</span>];
+y = foo[<span class="hljs-number">1</span>:<span class="hljs-number">2</span>];
+
+<span class="hljs-comment"># Call args with ** and *</span>
+foo(<span class="hljs-operator">**</span>kwargs, <span class="hljs-operator">*</span>args);
+
+<span class="hljs-comment"># Call args with NAME=</span>
+foo(a<span class="hljs-operator">=</span><span class="hljs-number">1</span>, b<span class="hljs-operator">=</span><span class="hljs-number">2</span>);
+
+<span class="hljs-comment"># Filter compr</span>
+x = foo(?<span class="hljs-type">type</span> <span class="hljs-operator">==</span> <span class="hljs-string">&quot;foo&quot;</span>);
+
+<span class="hljs-comment"># Assign compr</span>
+x = foo(<span class="hljs-operator">=</span>a<span class="hljs-operator">=</span><span class="hljs-number">1</span>, b<span class="hljs-operator">=</span><span class="hljs-number">2</span>);

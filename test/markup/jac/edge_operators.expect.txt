@@ -1,0 +1,8 @@
+<span class="hljs-comment"># Parameterized edge operators</span>
+a <span class="hljs-operator">-&gt;:</span> <span class="hljs-built_in">filter</span> <span class="hljs-operator">:-&gt;</span> b;
+c <span class="hljs-operator">&lt;-:</span> <span class="hljs-built_in">filter</span> <span class="hljs-operator">:&lt;-</span> d;
+e <span class="hljs-operator">+&gt;:</span> <span class="hljs-built_in">filter</span> <span class="hljs-operator">:+&gt;</span> f;
+g <span class="hljs-operator">&lt;+:</span> <span class="hljs-built_in">filter</span> <span class="hljs-operator">:&lt;+</span> h;
+
+<span class="hljs-comment"># Edge with complex filter</span>
+node1 <span class="hljs-operator">-&gt;:</span> (<span class="hljs-type">type</span> <span class="hljs-operator">==</span> <span class="hljs-string">&quot;foo&quot;</span>) <span class="hljs-operator">:-&gt;</span> node2;

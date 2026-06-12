@@ -8,8 +8,11 @@
   ],
   "version": "0.0.0",
   "license": "BSD-3-Clause",
-  "type": "commonjs",
+  "type": "module",
   "main": "./src/languages/jac.js",
+  "exports": {
+    ".": "./src/languages/jac.js"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/jaseci/highlightjs-jac.git"
@@ -18,7 +21,7 @@
     "url": "https://github.com/jaseci/highlightjs-jac/issues"
   },
   "scripts": {
-    "test": "mocha test"
+    "test": "node test/index.js"
   },
   "peerDependencies": {
     "highlight.js": ">=11.0.0"

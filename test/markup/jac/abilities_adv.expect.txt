@@ -1,0 +1,21 @@
+<span class="hljs-comment"># Class ability</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">can</span> <span class="hljs-title function_">foo</span>() {}
+
+<span class="hljs-comment"># Override ability</span>
+<span class="hljs-keyword">override</span> <span class="hljs-keyword">can</span> <span class="hljs-title function_">bar</span>() {}
+
+<span class="hljs-comment"># Static ability</span>
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">can</span> <span class="hljs-title function_">baz</span>() {}
+
+<span class="hljs-comment"># Async ability</span>
+<span class="hljs-keyword">async</span> <span class="hljs-keyword">can</span> <span class="hljs-title function_">qux</span>() {}
+
+<span class="hljs-comment"># Abstract ability</span>
+<span class="hljs-keyword">can</span> <span class="hljs-title function_">corge</span>() <span class="hljs-keyword">abs</span>;
+
+<span class="hljs-comment"># Ability with all modifiers</span>
+<span class="hljs-keyword">class</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">async</span> <span class="hljs-keyword">can</span> <span class="hljs-title function_">grault</span>() {}
+
+<span class="hljs-comment"># Decorated ability</span>
+<span class="hljs-meta">@decorator</span>
+<span class="hljs-keyword">override</span> <span class="hljs-keyword">can</span> <span class="hljs-title function_">garply</span>() {}

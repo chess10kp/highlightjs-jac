@@ -1,4 +1,15 @@
-# TODO: replace with a representative Jac sample for autodetection tests.
-with entry {
-    print("hello, jac");
+import:py from random { randint }
+
+node item {
+    has value: int = 0;
+}
+
+walker traversal {
+    has target: int;
+
+    can travel with root entry {
+        spawn here ++> item(value=randint(1,10));
+        self.target = 5;
+        disengage;
+    }
 }

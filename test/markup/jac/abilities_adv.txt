@@ -1,0 +1,21 @@
+# Class ability
+class can foo() {}
+
+# Override ability
+override can bar() {}
+
+# Static ability
+static can baz() {}
+
+# Async ability
+async can qux() {}
+
+# Abstract ability
+can corge() abs;
+
+# Ability with all modifiers
+class static async can grault() {}
+
+# Decorated ability
+@decorator
+override can garply() {}

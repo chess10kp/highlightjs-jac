@@ -1,4 +1,7 @@
-# TODO: exercise reserved words, built-ins, and literals.
+# Block comment test
+#* multiline
+   comment *#
+
 obj Greeter {
     has name: str = "world";
 
@@ -6,3 +9,100 @@ obj Greeter {
         print("hello, " + self.name);
     }
 }
+
+node User : Greeter {
+    can init() {
+        super.init();
+    }
+}
+
+walker Walk {
+    can route with root entry {
+        root --> node;
+        visit [-->];
+    }
+}
+
+@ ability
+can foo() {
+    return True if self.x > 0 else None;
+}
+
+if True {
+    pass;
+}
+
+for i in range(10) {
+    break;
+}
+
+while False {
+    continue;
+}
+
+try {
+    raise Error("fail");
+} except Error as e {
+    print(e);
+} finally {
+    cleanup();
+}
+
+import type from math { pi }
+
+lambda x: int -> x + 1
+
+async def fetch() {
+    await data;
+}
+
+#* nested block
+# comment inside *#
+
+# Additional constructs
+edge Link;
+
+class Shape {
+    can draw() {
+        pass;
+    }
+}
+
+enum Status {
+    OK = 1,
+    FAIL = 2
+}
+
+@decorator(args)
+can bar() {
+    yield x;
+    await async_task();
+}
+
+with file as f {
+    f.read();
+}
+
+match x {
+    case 1: do_something();
+    case 2: do_else();
+    default: fallback();
+}
+
+assert condition, "message";
+
+global x;
+nonlocal y;
+
+visit [-->];
+report result;
+
+# Ellipsis
+from ... import something;
+
+# JSX
+html = <div>Hello</div>;
+
+f"hello {name}!"
+"""multiline
+string"""

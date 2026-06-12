@@ -1,0 +1,32 @@
+<span class="hljs-comment"># type alias</span>
+<span class="hljs-type">type</span> alias Foo = <span class="hljs-type">int</span>;
+
+<span class="hljs-comment"># glob</span>
+<span class="hljs-keyword">glob</span> x: <span class="hljs-type">int</span> = <span class="hljs-number">5</span>;
+
+<span class="hljs-comment"># sem</span>
+<span class="hljs-keyword">sem</span> foo = <span class="hljs-string">&quot;bar&quot;</span>;
+
+<span class="hljs-comment"># impl</span>
+<span class="hljs-keyword">impl</span> Foo.bar() {}
+
+<span class="hljs-comment"># test</span>
+<span class="hljs-keyword">test</span> <span class="hljs-string">&quot;hello&quot;</span> {
+    <span class="hljs-keyword">assert</span> <span class="hljs-literal">True</span>;
+}
+
+<span class="hljs-comment"># with entry</span>
+<span class="hljs-keyword">with</span> <span class="hljs-keyword">entry</span> {
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;hello&quot;</span>);
+}
+
+<span class="hljs-comment"># with exit</span>
+<span class="hljs-keyword">with</span> <span class="hljs-keyword">exit</span> {
+    cleanup();
+}
+
+<span class="hljs-comment"># visit with colon</span>
+<span class="hljs-keyword">visit</span> :expr: <span class="hljs-keyword">node</span>;
+
+<span class="hljs-comment"># report</span>
+<span class="hljs-keyword">report</span> result;

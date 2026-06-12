@@ -1,0 +1,5 @@
+<span class="hljs-comment"># Dict spread</span>
+dct = {<span class="hljs-operator">**</span>a, <span class="hljs-operator">**</span>b};
+
+<span class="hljs-comment"># Dict with spread and entries</span>
+dct = {x: <span class="hljs-number">1</span>, <span class="hljs-operator">**</span>rest, y: <span class="hljs-number">2</span>};

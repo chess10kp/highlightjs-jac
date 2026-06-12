@@ -2,9 +2,8 @@
 
 Jac language definition for [highlight.js](https://highlightjs.org/).
 
-> Scaffold-only. The language grammar in `src/languages/jac.js` is a skeleton modeled after
-> the upstream `python.js` definition. Flesh out the keyword, string, and number modes
-> before publishing.
+The grammar is modeled after the upstream `python.js` definition and covers Jac-specific
+constructs including archetypes, edge operators, block comments, and f-strings.
 
 ## Layout
 
@@ -13,16 +12,20 @@ Jac language definition for [highlight.js](https://highlightjs.org/).
 ├── src/
 │   └── languages/
 │       └── jac.js           # Jac language definition
-└── test/
-    ├── detect/
-    │   └── jac/
-    │       └── default.txt  # detection sample
-    └── markup/
-        └── jac/
-            ├── keywords.txt
-            ├── keywords.expect.txt
-            ├── numbers.txt
-            └── numbers.expect.txt
+├── test/
+│   ├── index.js             # test runner
+│   ├── detect/
+│   │   └── jac/
+│   │       ├── default.txt  # detection sample
+│   │       └── tricky.txt
+│   └── markup/
+│       └── jac/
+│           ├── keywords.txt
+│           ├── keywords.expect.txt
+│           ├── numbers.txt
+│           ├── numbers.expect.txt
+│           └── ... (many more coverage tests)
+└── jac.spec                 # formal grammar reference
 ```
 
 ## Install
@@ -34,8 +37,8 @@ npm install highlightjs-jac
 ```
 
 ```js
-const hljs = require('highlight.js');
-const jac  = require('highlightjs-jac');
+import hljs from 'highlight.js';
+import jac from 'highlightjs-jac';
 
 hljs.registerLanguage('jac', jac);
 ```

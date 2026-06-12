@@ -1,4 +1,12 @@
-# TODO: decimal, hex, octal, binary, float, scientific, underscore separators.
-0 1 42 1_000_000
-0xFF 0o77 0b1010
-3.14 1.0e10 .5
+# Number literals test
+x = 42;
+y = 0;
+z = 1_000_000;
+hex = 0xFF;
+oct = 0o77;
+bin = 0b1010;
+pi = 3.14;
+sci = 1.0e10;
+frac = .5;
+imag = 3.14j;
+

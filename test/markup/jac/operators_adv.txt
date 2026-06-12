@@ -1,0 +1,41 @@
+# Walrus operator
+x := 5;
+
+# Assignment operators
+x += 1;
+y -= 2;
+z *= 3;
+a /= 4;
+b //= 5;
+c %= 6;
+d **= 7;
+e @= 8;
+f &= 9;
+g |= 10;
+h ^= 11;
+i <<= 12;
+j >>= 13;
+
+# Pipe operators
+x |> y;
+a <| b;
+c :> d;
+e <: f;
+
+# Lambda arrow
+lambda x -> x + 1;
+
+# Other operators
+a == b;
+c != d;
+e <= f;
+g >= h;
+i << j;
+k >> l;
+m ** n;
+o // p;
+q @ r;
+s & t;
+u | v;
+w ^ x;
+y ~ z;

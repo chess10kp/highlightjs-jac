@@ -1,0 +1,15 @@
+# Decorator with index
+@decorator[1]
+can foo() {}
+
+# Decorator with method call
+@decorator.method(arg)
+can bar() {}
+
+# Decorator with string arg
+@decorator("name")
+can baz() {}
+
+# Decorator with number arg
+@decorator(42)
+can qux() {}

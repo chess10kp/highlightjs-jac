@@ -1,0 +1,23 @@
+# Dot operators
+x = foo.>bar;
+y = foo<.bar;
+z = foo..bar;
+
+# Question mark
+x = foo?;
+
+# Index slice
+x = foo[1:2:3];
+y = foo[1:2];
+
+# Call args with ** and *
+foo(**kwargs, *args);
+
+# Call args with NAME=
+foo(a=1, b=2);
+
+# Filter compr
+x = foo(?type == "foo");
+
+# Assign compr
+x = foo(=a=1, b=2);

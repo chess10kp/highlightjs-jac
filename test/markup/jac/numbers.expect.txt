@@ -1,4 +1,12 @@
-<span class="hljs-comment"># TODO: replace with expected highlighted output for numbers.txt</span>
-<span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">42</span> <span class="hljs-number">1_000_000</span>
-<span class="hljs-number">0xFF</span> <span class="hljs-number">0o77</span> <span class="hljs-number">0b1010</span>
-<span class="hljs-number">3.14</span> <span class="hljs-number">1.0e10</span> <span class="hljs-number">.5</span>
+<span class="hljs-comment"># Number literals test</span>
+x = <span class="hljs-number">42</span>;
+y = <span class="hljs-number">0</span>;
+z = <span class="hljs-number">1_000_000</span>;
+hex = <span class="hljs-number">0xFF</span>;
+oct = <span class="hljs-number">0o77</span>;
+<span class="hljs-built_in">bin</span> = <span class="hljs-number">0b1010</span>;
+pi = <span class="hljs-number">3.14</span>;
+sci = <span class="hljs-number">1.0e10</span>;
+frac = <span class="hljs-number">.5</span>;
+imag = <span class="hljs-number">3.14j</span>;
+

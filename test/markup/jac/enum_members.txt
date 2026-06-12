@@ -1,0 +1,6 @@
+# Enum members
+enum Status {
+    OK = 1,
+    FAIL = 2,
+    PENDING = 3
+}

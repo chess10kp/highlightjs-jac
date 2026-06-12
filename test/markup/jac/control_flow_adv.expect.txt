@@ -1,0 +1,15 @@
+<span class="hljs-comment"># for with to and by</span>
+<span class="hljs-keyword">for</span> i = <span class="hljs-number">0</span> <span class="hljs-keyword">to</span> <span class="hljs-number">10</span> <span class="hljs-keyword">by</span> <span class="hljs-number">2</span> {}
+
+<span class="hljs-comment"># try with awaiting</span>
+<span class="hljs-keyword">try</span> {
+    risky();
+} <span class="hljs-keyword">awaiting</span> {
+    async_cleanup();
+}
+
+<span class="hljs-comment"># yield from</span>
+<span class="hljs-keyword">yield</span> <span class="hljs-keyword">from</span> x;
+
+<span class="hljs-comment"># raise from</span>
+<span class="hljs-keyword">raise</span> Error <span class="hljs-keyword">from</span> e;

@@ -1,0 +1,5 @@
+# Dict spread
+dct = {**a, **b};
+
+# Dict with spread and entries
+dct = {x: 1, **rest, y: 2};

@@ -1,0 +1,17 @@
+async for i in range(10) {
+    print(i);
+}
+
+with entry {
+    print("hello");
+}
+
+obj Foo {
+    has name: str;
+}
+
+walker Bar {
+    can greet with root entry {
+        root --> node;
+    }
+}

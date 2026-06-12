@@ -12,3 +12,6 @@ dist/
 # Editor / OS noise
 .DS_Store
 *.log
+
+# Lock files
+package-lock.json

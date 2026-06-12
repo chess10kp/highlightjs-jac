@@ -1,0 +1,34 @@
+<span class="hljs-comment"># match with as</span>
+<span class="hljs-keyword">match</span> x {
+    <span class="hljs-keyword">case</span> y <span class="hljs-keyword">as</span> z: do_something();
+}
+
+<span class="hljs-comment"># match with |</span>
+<span class="hljs-keyword">match</span> x {
+    <span class="hljs-keyword">case</span> <span class="hljs-number">1</span> <span class="hljs-operator">|</span> <span class="hljs-number">2</span>: do_something();
+}
+
+<span class="hljs-comment"># match with **</span>
+<span class="hljs-keyword">match</span> x {
+    <span class="hljs-keyword">case</span> {<span class="hljs-string">&quot;a&quot;</span>: b, <span class="hljs-operator">**</span>rest}: do_something();
+}
+
+<span class="hljs-comment"># match with *</span>
+<span class="hljs-keyword">match</span> x {
+    <span class="hljs-keyword">case</span> [a, <span class="hljs-operator">*</span>rest]: do_something();
+}
+
+<span class="hljs-comment"># match with class pattern</span>
+<span class="hljs-keyword">match</span> x {
+    <span class="hljs-keyword">case</span> Foo(a, b): do_something();
+}
+
+<span class="hljs-comment"># match with keyword pattern</span>
+<span class="hljs-keyword">match</span> x {
+    <span class="hljs-keyword">case</span> Foo(a<span class="hljs-operator">=</span>b): do_something();
+}
+
+<span class="hljs-comment"># match with if guard</span>
+<span class="hljs-keyword">match</span> x {
+    <span class="hljs-keyword">case</span> y <span class="hljs-keyword">if</span> y <span class="hljs-operator">&gt;</span> <span class="hljs-number">0</span>: do_something();
+}

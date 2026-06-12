@@ -1,0 +1,29 @@
+# include
+include "foo.jac";
+
+# import with braces
+import { def, can, obj } from math;
+
+# from import
+from math import pi;
+
+# import with as
+import math as m;
+
+# import with default
+import { default } from math;
+
+# import with glob
+import { glob } from math;
+
+# import with has
+import { has } from math;
+
+# import with async
+import { async } from math;
+
+# import with string
+import { "foo" } from math;
+
+# import with kwesc name
+import { `name` } from math;

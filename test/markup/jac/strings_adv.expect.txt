@@ -1,0 +1,22 @@
+<span class="hljs-comment"># Byte strings</span>
+b = <span class="hljs-string">b&quot;hello&quot;</span>;
+br = <span class="hljs-string">br&#x27;hello&#x27;</span>;
+Br = <span class="hljs-string">Br&quot;&quot;&quot;hello&quot;&quot;&quot;</span>;
+BR = <span class="hljs-string">BR&#x27;&#x27;&#x27;hello&#x27;&#x27;&#x27;</span>;
+
+<span class="hljs-comment"># Raw strings</span>
+r = <span class="hljs-string">r&quot;hello&quot;</span>;
+R = <span class="hljs-string">R&#x27;hello&#x27;</span>;
+r = <span class="hljs-string">r&quot;&quot;&quot;hello&quot;&quot;&quot;</span>;
+
+<span class="hljs-comment"># Nested f-string braces</span>
+nested = <span class="hljs-string">f&quot;value: <span class="hljs-subst">{x: <span class="hljs-subst">{y:d}</span>}</span>&quot;</span>;
+
+<span class="hljs-comment"># f-string with conversion</span>
+conv = <span class="hljs-string">f&quot;<span class="hljs-subst">{name!r}</span>&quot;</span>;
+
+<span class="hljs-comment"># f-string with format spec</span>
+fmt = <span class="hljs-string">f&quot;<span class="hljs-subst">{pi:.2f}</span>&quot;</span>;
+
+<span class="hljs-comment"># f-string with nested braces and format spec</span>
+complex_fmt = <span class="hljs-string">f&quot;outer <span class="hljs-subst">{x: <span class="hljs-subst">{y:.2f}</span>}</span> end&quot;</span>;

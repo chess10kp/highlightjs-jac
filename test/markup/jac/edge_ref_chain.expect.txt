@@ -1,0 +1,8 @@
+<span class="hljs-comment"># Edge ref chain</span>
+<span class="hljs-keyword">edge</span> [<span class="hljs-variable language_">root</span>] <span class="hljs-operator">--&gt;</span>;
+
+<span class="hljs-comment"># Async edge ref</span>
+<span class="hljs-keyword">async</span> <span class="hljs-keyword">edge</span> [<span class="hljs-variable language_">root</span>] <span class="hljs-operator">--&gt;</span>;
+
+<span class="hljs-comment"># Edge ref with filter</span>
+<span class="hljs-keyword">edge</span> [<span class="hljs-variable language_">root</span>] <span class="hljs-operator">--&gt;</span> [?<span class="hljs-type">type</span> <span class="hljs-operator">==</span> <span class="hljs-string">&quot;foo&quot;</span>];

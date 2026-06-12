@@ -1,0 +1,8 @@
+# Edge ref chain
+edge [root] -->;
+
+# Async edge ref
+async edge [root] -->;
+
+# Edge ref with filter
+edge [root] --> [?type == "foo"];

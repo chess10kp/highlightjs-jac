@@ -1,0 +1,18 @@
+# Async archetype
+async node Foo {}
+
+# Access tag
+obj:pub Bar {}
+
+# Multiple inheritance
+obj Qux(A, B) {}
+
+# Enum with type
+enum Status: str {
+    OK = 1;
+}
+
+# Enum with inheritance
+enum Priority(Foo) {
+    LOW = 1;
+}

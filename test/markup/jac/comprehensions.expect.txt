@@ -1,0 +1,8 @@
+<span class="hljs-comment"># List comprehension</span>
+lst = [x <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>) <span class="hljs-keyword">if</span> x <span class="hljs-operator">&gt;</span> <span class="hljs-number">5</span>];
+
+<span class="hljs-comment"># Dict comprehension</span>
+dct = {x: x<span class="hljs-operator">*</span><span class="hljs-number">2</span> <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>)};
+
+<span class="hljs-comment"># Set comprehension</span>
+s = {x <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>)};

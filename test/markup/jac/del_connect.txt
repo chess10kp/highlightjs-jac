@@ -1,0 +1,5 @@
+# Del connect
+del edge -->;
+
+# Del connect with parameterized
+del edge ->: filter :->;
